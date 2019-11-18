@@ -1,6 +1,6 @@
-var width = 1200,
-    height = 600,
-    weight = 2;
+var width = 1500,
+    height = 1000,
+    weight = 5;
 
 var svg = d3.select("body").append("svg")
     .attr("width", width)
@@ -13,17 +13,21 @@ d3.csv("./data/q6_cnt.csv", function (data) {
 //domain: 데이터의 범위, 입력 크기
 //range: 표시할 범위, 출력 크기
 //clamp: domain의 범위를 넘어간 값에 대하여 domain의 최대값으로 고정시킨다.
-wordScale = d3.scale.linear().domain([0, 84]).range([1,150]).clamp(false);
+wordScale = d3.scale.linear().domain([1, 84]).range([10,840]).clamp(false);
 var fill = d3.scale.category20();
 var svg = d3.select("svg")
             .append("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
 
+function go(){
+  location.href = "look6.html";
+}
+
 function showCloud(data) {
     d3.layout.cloud().size([width, height])
         //클라우드 레이아웃에 데이터 전달
         .words(data)
-        .padding(1)
+        .padding(5)
         //.rotate(funcion(d){return 0;})
         //.rotate(0)
         .rotate(function (d) {
@@ -51,7 +55,7 @@ function showCloud(data) {
             .text(function (d) {
                 return d.text;
             })
-            .on("click",function(d){alert(d.text)});
+            .on("click",go);
 
         cloud
             .transition()
