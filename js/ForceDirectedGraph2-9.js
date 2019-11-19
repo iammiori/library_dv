@@ -42,7 +42,7 @@ d3.json("./data/q9.json", function(error, graph) {
           .on("click",openText);
 
   function openText(d){
-    alert(d.id);
+    //alert(d.id);
     document.getElementById("output").innerHTML ="<b>"+d.id+"</b><br><br>" + d.content;
   }
 

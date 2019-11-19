@@ -50,8 +50,8 @@ function showCloud(data) {
             .attr('font-size', 10)
             .text(function (d) {
                 return d.text;
-            })
-            .on("click",function(d){alert(d.text)});
+            });
+            //.on("click",function(d){alert(d.text)});
 
         cloud
             .transition()
