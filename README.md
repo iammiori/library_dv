@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+# Sejong Univ. 학술정보원 설문조사 시각화
 
-You can use the [editor on GitHub](https://github.com/iammiori/library_dv/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+[Go to site](https://iammiori.github.io/library_dv/wc_index6.html)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## 기능
+1. word cloud
+2. force directed graph
+<br>
+- 기본적으로 문항별로 키워드를 카운트하여, wordcloud를 그림
+- wordcloud 만으로는 문맥등을 파악하기 힘들기 때문에, 연관도를 분석해 froce directed graph를 그림
+- wordcloud 에서 단어 선택시 force directed graph page로 넘어감
+- force directed graph 에서 node 선택시, 해당 node 에 해당해는 raw data 뿌려줌
 
-### Markdown
+## 사용언어
+- html + css + js (web)
+- pyhon (analysis)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/iammiori/library_dv/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## 사용라이브러리
+- d3.js
